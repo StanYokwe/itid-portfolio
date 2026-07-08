@@ -1,17 +1,31 @@
-# IT Innovation & Design Portfolio Website
+# VHS / Film-Inspired ITID Portfolio
 
-This is a clean, responsive one-page portfolio website for a graduating IT Innovation and Design student.
+This is a GitHub Pages-ready static portfolio website for a graduating IT Innovation and Design student.
 
-## How to use it
+## Files
 
-1. Open `index.html` in your browser.
-2. Replace placeholder contact links with your real email, LinkedIn, GitHub, and resume PDF.
-3. Replace project descriptions with your final screenshots, GitHub links, and live demo links.
-4. Upload the folder to GitHub Pages, Netlify, or Vercel.
+- `index.html` — main website content
+- `styles.css` — VHS/film UI styling
+- `script.js` — interactions, filters, case file modal, VHS toggle, boot screen
 
-## Suggested edits
+## How to customize
 
-- Add your real name in the hero section.
-- Add screenshots for each project.
-- Link each project card to a full case study page or GitHub repository.
-- Add your resume as `resume.pdf` and change the Resume PDF link.
+Open `index.html` and replace:
+
+- Isaac Wani
+- your.email@example.com
+- LinkedIn link
+- GitHub link
+- Download Resume link
+- Any project titles or descriptions you want to change
+
+## GitHub Pages
+
+1. Create a public GitHub repository.
+2. Upload these files to the root of the repo, not inside another folder.
+3. Go to Settings → Pages.
+4. Source: Deploy from a branch.
+5. Branch: main, Folder: /root.
+6. Save.
+
+Your portfolio will publish as a GitHub Pages website.
