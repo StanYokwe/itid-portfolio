@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Innovation & Design Portfolio</title>
+  <meta name="description" content="Portfolio website for a graduating IT Innovation and Design student at Conestoga College." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <a href="#home" class="brand">
+      <span class="brand-mark">IT</span>
+      <span class="brand-text">Innovation Portfolio</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#growth">Projects to Build</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-pill">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Graduating IT Innovation & Design Student · Conestoga College</p>
+        <h1>Building digital products that connect design, code, data, and real user needs.</h1>
+        <p class="hero-text">
+          I am an entry-level technology professional with academic experience in mobile apps,
+          UX case studies, backend APIs, database-driven web systems, data dashboards, and creative technology.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">View Featured Projects</a>
+          <a class="button secondary" href="#growth">See What I’m Building Next</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="Portfolio skill orbit graphic">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="core-card">
+          <span class="core-icon">✦</span>
+          <strong>ITID</strong>
+          <small>Design + Development + Strategy</small>
+        </div>
+        <span class="skill-bubble bubble-one">UX</span>
+        <span class="skill-bubble bubble-two">Mobile</span>
+        <span class="skill-bubble bubble-three">APIs</span>
+        <span class="skill-bubble bubble-four">Data</span>
+      </div>
+    </section>
+
+    <section class="snapshot section-shell reveal" aria-label="Portfolio snapshot">
+      <article>
+        <strong>06</strong>
+        <span>Featured academic projects</span>
+      </article>
+      <article>
+        <strong>04</strong>
+        <span>Core focus areas</span>
+      </article>
+      <article>
+        <strong>03</strong>
+        <span>New portfolio projects to build</span>
+      </article>
+      <article>
+        <strong>∞</strong>
+        <span>Curiosity for learning</span>
+      </article>
+    </section>
+
+    <section id="work" class="section-shell section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Featured Work</p>
+        <h2>Academic projects presented like real-world product case studies.</h2>
+        <p>
+          These projects show a variety of skills: mobile development, backend systems, databases,
+          dashboards, UX research, and interactive design.
+        </p>
+      </div>
+
+      <div class="filter-bar reveal" role="group" aria-label="Project filters">
+        <button class="filter-button active" data-filter="all">All</button>
+        <button class="filter-button" data-filter="mobile">Mobile</button>
+        <button class="filter-button" data-filter="backend">Backend</button>
+        <button class="filter-button" data-filter="data">Data</button>
+        <button class="filter-button" data-filter="ux">UX</button>
+        <button class="filter-button" data-filter="creative">Creative</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card large reveal" data-category="mobile ux">
+          <div class="project-topline">
+            <span>Mobile App</span>
+            <span>Flutter · SQLite · Maps</span>
+          </div>
+          <h3>Memory Log Mobile App</h3>
+          <p>
+            A mobile application for saving personal memories with location support, offline storage,
+            and a simple user-centered interface.
+          </p>
+          <ul>
+            <li>Created memory entry flows and mobile navigation</li>
+            <li>Used local storage for offline access</li>
+            <li>Connected app features to practical user needs</li>
+          </ul>
+          <a href="#case-study-template" class="text-link">Use case study format →</a>
+        </article>
+
+        <article class="project-card reveal" data-category="backend">
+          <div class="project-icon">API</div>
+          <h3>Desired Marketplace API</h3>
+          <p>
+            A backend marketplace system using Node.js, Express, REST routes, authentication concepts,
+            and API testing.
+          </p>
+          <div class="tag-row"><span>Node.js</span><span>Express</span><span>REST</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="backend">
+          <div class="project-icon">DB</div>
+          <h3>Member Database Web App</h3>
+          <p>
+            A database-driven web application with CRUD features, validation, MVC structure, and MySQL storage.
+          </p>
+          <div class="tag-row"><span>Java</span><span>JSP</span><span>MySQL</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="data">
+          <div class="project-icon">BI</div>
+          <h3>Real Estate Power BI Dashboard</h3>
+          <p>
+            A visual dashboard for analyzing housing options by budget, postal code, property type, and location.
+          </p>
+          <div class="tag-row"><span>Power BI</span><span>Data</span><span>Filters</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="ux">
+          <div class="project-icon">UX</div>
+          <h3>Weather Dashboard UX Case Study</h3>
+          <p>
+            A UX project covering ideation, wireframes, high-fidelity screens, usability testing, and final design improvements.
+          </p>
+          <div class="tag-row"><span>Figma</span><span>Research</span><span>Prototype</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="mobile">
+          <div class="project-icon">APP</div>
+          <h3>Workshop Registration Android App</h3>
+          <p>
+            An Android registration flow using Kotlin, Jetpack Compose, form validation, navigation, and reusable UI components.
+          </p>
+          <div class="tag-row"><span>Kotlin</span><span>Compose</span><span>Validation</span></div>
+        </article>
+
+        <article class="project-card reveal" data-category="creative">
+          <div class="project-icon">3D</div>
+          <h3>3D Logo Animation</h3>
+          <p>
+            A creative technology project using Blender to explore branding, animation principles, timing, and visual presentation.
+          </p>
+          <div class="tag-row"><span>Blender</span><span>Motion</span><span>Branding</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="case-study-template" class="case-study section-shell section-block reveal">
+      <div class="case-copy">
+        <p class="eyebrow">Reusable Case Study Layout</p>
+        <h2>Every project should tell a story, not just list tools.</h2>
+        <p>
+          Use this structure to make academic assignments feel professional and interview-ready.
+        </p>
+      </div>
+      <div class="case-steps">
+        <article><span>01</span><strong>Problem</strong><p>What issue were you solving?</p></article>
+        <article><span>02</span><strong>Role</strong><p>What part did you design or build?</p></article>
+        <article><span>03</span><strong>Process</strong><p>How did you research, design, code, and test?</p></article>
+        <article><span>04</span><strong>Outcome</strong><p>What worked, what changed, and what did you learn?</p></article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-shell section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Skills Map</p>
+        <h2>A cross-functional skill set for entry-level technology roles.</h2>
+      </div>
+
+      <div class="skills-board reveal">
+        <div class="skill-column">
+          <h3>Development</h3>
+          <p>Kotlin, Jetpack Compose, Flutter, Java, JavaScript, HTML, CSS, Node.js, Express</p>
+        </div>
+        <div class="skill-column">
+          <h3>Data & Systems</h3>
+          <p>MySQL, SQLite, JDBC, REST APIs, CRUD, Power BI, dashboards, data filtering</p>
+        </div>
+        <div class="skill-column">
+          <h3>Design</h3>
+          <p>UX research, wireframes, Figma prototypes, usability testing, responsive UI, branding</p>
+        </div>
+        <div class="skill-column">
+          <h3>Creative Tech</h3>
+          <p>Blender, Unity, animation principles, interactive design, visual storytelling</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="growth" class="section-shell section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Projects to Build Next</p>
+        <h2>Extra projects that can make interviews easier.</h2>
+        <p>
+          These are portfolio upgrades that show real-world thinking even without outside work experience.
+        </p>
+      </div>
+
+      <div class="build-list">
+        <article class="build-card reveal">
+          <span class="build-number">01</span>
+          <h3>Full-Stack Booking System</h3>
+          <p>
+            A service booking website with customer forms, admin dashboard, login, pricing calculator,
+            calendar availability, database storage, and confirmation emails.
+          </p>
+          <strong>Why interviewers like it:</strong>
+          <p>It shows business logic, full-stack thinking, and practical problem-solving.</p>
+        </article>
+
+        <article class="build-card reveal">
+          <span class="build-number">02</span>
+          <h3>IT Help Desk Ticketing System</h3>
+          <p>
+            A support system where users submit tickets and admins update status, priority, category,
+            and resolution notes.
+          </p>
+          <strong>Why interviewers like it:</strong>
+          <p>It fits IT support, product support, technical analyst, and operations roles.</p>
+        </article>
+
+        <article class="build-card reveal">
+          <span class="build-number">03</span>
+          <h3>Student Life Mobile App</h3>
+          <p>
+            A mobile app with class schedule, assignment tracker, notifications, campus resources,
+            budget tracking, and dark/light mode.
+          </p>
+          <strong>Why interviewers like it:</strong>
+          <p>It connects directly to your experience as a student and shows mobile/product thinking.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell section-block reveal">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Entry-level, but not empty-handed.</h2>
+      </div>
+      <p>
+        I am a graduating IT Innovation and Design student at Conestoga College with a strong interest in
+        UX design, mobile development, web systems, APIs, data dashboards, and business-focused technology.
+        My academic projects show my ability to learn quickly, solve problems, and turn ideas into functional
+        digital experiences.
+      </p>
+    </section>
+
+    <section id="contact" class="contact section-shell section-block reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let’s connect.</h2>
+      <p>Replace these placeholders with your real email, LinkedIn, GitHub, and resume link.</p>
+      <div class="contact-links">
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Resume PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> IT Innovation & Design Portfolio. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
