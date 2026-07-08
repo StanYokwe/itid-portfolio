@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaac Wani | IT Innovation & Design Portfolio</title>
+  <meta name="description" content="A VHS and film-inspired interactive portfolio for a graduating IT Innovation and Design student at Conestoga College." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="cursor-light" aria-hidden="true"></div>
+
+  <section class="boot-screen" id="bootScreen" aria-label="Portfolio start screen">
+    <div class="boot-frame">
+      <div class="boot-meta">
+        <span>CAMERA 01</span>
+        <span>SP</span>
+        <span id="bootClock">00:00:00</span>
+      </div>
+      <div class="boot-title">
+        <p class="tiny-label">CONESTOGA COLLEGE / IT INNOVATION + DESIGN</p>
+        <h1>PORTFOLIO<br />TAPE</h1>
+        <p class="boot-copy">A graduate reel of mobile apps, UX systems, APIs, databases, dashboards, and creative technology.</p>
+      </div>
+      <button class="start-button" id="startButton">▶ PRESS START</button>
+      <p class="boot-note">Tip: press <kbd>V</kbd> anytime to toggle VHS mode.</p>
+    </div>
+  </section>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home" aria-label="Go to home">
+      <span class="brand-mark">IW</span>
+      <span>
+        <strong>Isaac Wani</strong>
+        <small>ITID Graduate Reel</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#reel">Reel</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#build-next">Build Next</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero section-wrap">
+      <div class="hero-copy reveal">
+        <div class="status-row">
+          <span class="record-dot"></span>
+          <span>REC 2026</span>
+          <span>GRADUATING STUDENT</span>
+        </div>
+        <h2 class="glitch-title" data-text="DESIGNING SYSTEMS THAT FEEL HUMAN.">DESIGNING SYSTEMS THAT FEEL HUMAN.</h2>
+        <p class="hero-text">
+          I’m a graduating IT Innovation and Design student at Conestoga College, building practical digital products across UX, mobile development, web systems, backend APIs, databases, data dashboards, and creative technology.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Enter Project Archive</a>
+          <a class="button ghost" href="#contact">Load Contact Tape</a>
+        </div>
+      </div>
+
+      <div class="vhs-player reveal" aria-label="Interactive VHS portfolio player">
+        <div class="player-top">
+          <span>ITID-PORTFOLIO / TAPE 01</span>
+          <span class="blink">● PLAY</span>
+        </div>
+        <div class="screen" id="screen">
+          <div class="screen-overlay"></div>
+          <div class="screen-content" id="screenContent">
+            <p class="screen-kicker">NOW PLAYING</p>
+            <h3 id="screenTitle">Memory Log Mobile App</h3>
+            <p id="screenDesc">Flutter, SQLite, maps, local storage, and user-centered mobile flows.</p>
+            <span id="screenTag">MOBILE / UX</span>
+          </div>
+        </div>
+        <div class="controls" role="group" aria-label="Portfolio reel controls">
+          <button class="control-btn" data-reel="0">01</button>
+          <button class="control-btn" data-reel="1">02</button>
+          <button class="control-btn" data-reel="2">03</button>
+          <button class="control-btn" data-reel="3">04</button>
+          <button class="control-btn" data-reel="4">05</button>
+        </div>
+        <div class="deck-bottom">
+          <span>TRACKING</span>
+          <input type="range" id="trackingSlider" min="0" max="100" value="48" aria-label="Adjust VHS tracking effect" />
+        </div>
+      </div>
+    </section>
+
+    <section id="reel" class="ticker-strip" aria-label="Portfolio specialties ticker">
+      <div class="ticker-track">
+        <span>UX DESIGN</span><span>MOBILE APPS</span><span>REST APIs</span><span>MYSQL</span><span>POWER BI</span><span>FIGMA</span><span>BLENDER</span><span>UNITY</span>
+        <span>UX DESIGN</span><span>MOBILE APPS</span><span>REST APIs</span><span>MYSQL</span><span>POWER BI</span><span>FIGMA</span><span>BLENDER</span><span>UNITY</span>
+      </div>
+    </section>
+
+    <section class="section-wrap stats-grid reveal" aria-label="Portfolio highlights">
+      <article>
+        <span>06+</span>
+        <p>Academic projects turned into case studies</p>
+      </article>
+      <article>
+        <span>04</span>
+        <p>Focus areas: design, code, data, creative tech</p>
+      </article>
+      <article>
+        <span>100%</span>
+        <p>Entry-level ready, built from school experience</p>
+      </article>
+      <article>
+        <span>NEW</span>
+        <p>Real-world project ideas ready to build next</p>
+      </article>
+    </section>
+
+    <section id="projects" class="section-wrap section-block">
+      <div class="section-heading reveal">
+        <p class="tiny-label">PROJECT ARCHIVE</p>
+        <h2>Choose a tape. Open the case file.</h2>
+        <p>Each project is presented like a real product story: problem, role, tools, features, challenge, and what I learned.</p>
+      </div>
+
+      <div class="filter-console reveal" role="group" aria-label="Filter projects by category">
+        <button class="filter active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="mobile">MOBILE</button>
+        <button class="filter" data-filter="backend">BACKEND</button>
+        <button class="filter" data-filter="data">DATA</button>
+        <button class="filter" data-filter="ux">UX</button>
+        <button class="filter" data-filter="creative">CREATIVE</button>
+      </div>
+
+      <div class="project-wall" id="projectWall">
+        <article class="tape-card reveal" data-category="mobile ux" data-project="memory">
+          <div class="tape-label"><span>01</span><strong>MEMORY LOG</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>Memory Log Mobile App</h3>
+          <p>Mobile app for saving memories with location support, offline storage, and simple navigation.</p>
+          <div class="tags"><span>Flutter</span><span>SQLite</span><span>Maps</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+
+        <article class="tape-card reveal" data-category="backend" data-project="marketplace">
+          <div class="tape-label"><span>02</span><strong>MARKETPLACE API</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>Desired Marketplace API</h3>
+          <p>Backend marketplace API using REST routes, authentication concepts, and endpoint testing.</p>
+          <div class="tags"><span>Node.js</span><span>Express</span><span>REST</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+
+        <article class="tape-card reveal" data-category="backend" data-project="database">
+          <div class="tape-label"><span>03</span><strong>MEMBER DATABASE</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>Member Database Web App</h3>
+          <p>CRUD web app with Java, JSP, JDBC, validation, MVC structure, and MySQL storage.</p>
+          <div class="tags"><span>Java</span><span>JSP</span><span>MySQL</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+
+        <article class="tape-card reveal" data-category="data" data-project="powerbi">
+          <div class="tape-label"><span>04</span><strong>REAL ESTATE BI</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>Power BI Real Estate Dashboard</h3>
+          <p>Dashboard for analyzing housing options by budget, zip/postal area, property type, and filters.</p>
+          <div class="tags"><span>Power BI</span><span>Dashboards</span><span>Filters</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+
+        <article class="tape-card reveal" data-category="ux" data-project="weather">
+          <div class="tape-label"><span>05</span><strong>WEATHER UX</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>Weather Dashboard UX Case Study</h3>
+          <p>UX process from ideation and wireframes to prototype, usability testing, and final UI improvements.</p>
+          <div class="tags"><span>Figma</span><span>Research</span><span>Prototype</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+
+        <article class="tape-card reveal" data-category="mobile" data-project="workshop">
+          <div class="tape-label"><span>06</span><strong>ANDROID REG</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>Workshop Registration Android App</h3>
+          <p>Kotlin + Jetpack Compose registration flow with validation, navigation, and reusable UI components.</p>
+          <div class="tags"><span>Kotlin</span><span>Compose</span><span>Validation</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+
+        <article class="tape-card reveal" data-category="creative" data-project="creative">
+          <div class="tape-label"><span>07</span><strong>CREATIVE TECH</strong></div>
+          <div class="tape-spools"><i></i><i></i></div>
+          <h3>3D Logo Animation + Unity Game</h3>
+          <p>Creative technology work using Blender, animation principles, Unity interactions, and visual storytelling.</p>
+          <div class="tags"><span>Blender</span><span>Unity</span><span>Motion</span></div>
+          <button class="open-case">Open Case File</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-wrap section-block split-section">
+      <div class="section-heading reveal">
+        <p class="tiny-label">SIGNAL MAP</p>
+        <h2>Skills organized like a control board.</h2>
+        <p>Use this section to show interviewers that you are flexible across design, development, systems, and visual technology.</p>
+      </div>
+
+      <div class="control-board reveal">
+        <div class="meter-card">
+          <span>FRONTEND</span>
+          <div class="meter"><i style="--level: 86%"></i></div>
+          <p>HTML, CSS, JavaScript, responsive UI</p>
+        </div>
+        <div class="meter-card">
+          <span>MOBILE</span>
+          <div class="meter"><i style="--level: 82%"></i></div>
+          <p>Kotlin, Jetpack Compose, Flutter</p>
+        </div>
+        <div class="meter-card">
+          <span>BACKEND</span>
+          <div class="meter"><i style="--level: 78%"></i></div>
+          <p>Node.js, Express, REST APIs, CRUD</p>
+        </div>
+        <div class="meter-card">
+          <span>DATABASE</span>
+          <div class="meter"><i style="--level: 80%"></i></div>
+          <p>MySQL, SQLite, JDBC</p>
+        </div>
+        <div class="meter-card">
+          <span>UX</span>
+          <div class="meter"><i style="--level: 84%"></i></div>
+          <p>Figma, research, wireframes, usability testing</p>
+        </div>
+        <div class="meter-card">
+          <span>DATA</span>
+          <div class="meter"><i style="--level: 75%"></i></div>
+          <p>Power BI, dashboards, filters, analysis</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="build-next" class="section-wrap section-block">
+      <div class="section-heading reveal">
+        <p class="tiny-label">NEXT TAPES</p>
+        <h2>Projects interviewers would actually like.</h2>
+        <p>These would make the portfolio stronger because they look like real business products, not only school assignments.</p>
+      </div>
+
+      <div class="next-grid">
+        <article class="next-card reveal">
+          <span>BUILD 01</span>
+          <h3>Full-Stack Booking System</h3>
+          <p>Booking form, admin dashboard, service categories, pricing calculator, calendar availability, email confirmation, authentication, and database storage.</p>
+        </article>
+        <article class="next-card reveal">
+          <span>BUILD 02</span>
+          <h3>IT Help Desk Ticketing System</h3>
+          <p>Ticket creation, priorities, categories, admin status updates, open/closed dashboard, search, filters, and role-based login.</p>
+        </article>
+        <article class="next-card reveal">
+          <span>BUILD 03</span>
+          <h3>Student Life Mobile App</h3>
+          <p>Class schedule, assignment tracker, reminder notifications, campus resources, budget tracker, to-do list, and dark/light mode.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-wrap section-block timeline-section">
+      <div class="section-heading reveal">
+        <p class="tiny-label">CASE STUDY FORMAT</p>
+        <h2>How each project should be written.</h2>
+      </div>
+      <div class="filmstrip reveal" aria-label="Case study steps">
+        <article><span>01</span><strong>Problem</strong><p>What user or system problem was being solved?</p></article>
+        <article><span>02</span><strong>Role</strong><p>What did you design, build, research, test, or analyze?</p></article>
+        <article><span>03</span><strong>Process</strong><p>Show sketches, wireframes, database models, code screenshots, and testing.</p></article>
+        <article><span>04</span><strong>Outcome</strong><p>Explain what worked, what changed, and what you learned.</p></article>
+      </div>
+    </section>
+
+    <section id="contact" class="section-wrap contact-section reveal">
+      <div>
+        <p class="tiny-label">END OF TAPE</p>
+        <h2>Let’s build useful digital products.</h2>
+        <p>Replace the placeholder links below with your real email, LinkedIn, GitHub, and resume.</p>
+      </div>
+      <div class="contact-card">
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Download Resume</a>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="case-modal" id="caseModal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Close case file">×</button>
+    <div class="modal-tag" id="modalTag">CASE FILE</div>
+    <h2 id="modalTitle">Project Title</h2>
+    <p id="modalSummary">Project summary.</p>
+    <div class="modal-grid">
+      <article><span>Problem</span><p id="modalProblem"></p></article>
+      <article><span>My Role</span><p id="modalRole"></p></article>
+      <article><span>Tools</span><p id="modalTools"></p></article>
+      <article><span>What I Learned</span><p id="modalLearned"></p></article>
+    </div>
+  </dialog>
+
+  <button class="vhs-toggle" id="vhsToggle" aria-label="Toggle VHS mode">VHS</button>
+
+  <footer class="footer section-wrap">
+    <p>© <span id="year"></span> Isaac Wani. Built for GitHub Pages.</p>
+    <p>Original portfolio concept inspired by old VHS, film, and early-web interaction.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
