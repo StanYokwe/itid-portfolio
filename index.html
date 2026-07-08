@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaac Wani | IT Innovation & Design Portfolio</title>
+  <meta name="description" content="An interactive early-2000s cartoon DVD menu inspired portfolio for a graduating IT Innovation and Design student at Conestoga College." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700;800;900&family=Luckiest+Guy&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dvd-noise" aria-hidden="true"></div>
+  <div class="dvd-vignette" aria-hidden="true"></div>
+  <div class="cursor-star" id="cursorStar" aria-hidden="true">★</div>
+
+  <section class="loader" id="loader" aria-label="DVD loading screen">
+    <div class="loader-card">
+      <div class="disc" aria-hidden="true"><span></span></div>
+      <p class="loader-kicker">NOW LOADING BONUS FEATURES</p>
+      <h1>ITID DVD Portfolio</h1>
+      <p>Early-2000s cartoon DVD menu energy. Original design. Academic projects. Interview-ready story.</p>
+      <button id="playIntro" class="big-dvd-button">▶ Play Portfolio</button>
+      <small>Tip: Use the remote buttons or keyboard numbers 1–5.</small>
+    </div>
+  </section>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#home" aria-label="Go to main menu">
+      <span class="brand-disc" aria-hidden="true"></span>
+      <span>
+        <strong>Isaac Wani</strong>
+        <small>IT Innovation & Design</small>
+      </span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Open navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="DVD menu navigation">
+      <a href="#home">Main Menu</a>
+      <a href="#scene-selection">Scene Selection</a>
+      <a href="#bonus-features">Bonus Features</a>
+      <a href="#skills">Special Features</a>
+      <a href="#contact">End Credits</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero dvd-stage">
+      <div class="animated-set" aria-hidden="true">
+        <span class="cloud cloud-one"></span>
+        <span class="cloud cloud-two"></span>
+        <span class="cloud cloud-three"></span>
+        <span class="sunburst"></span>
+        <span class="hill hill-one"></span>
+        <span class="hill hill-two"></span>
+        <span class="tree tree-one"></span>
+        <span class="tree tree-two"></span>
+        <span class="butterfly butterfly-one">✦</span>
+        <span class="butterfly butterfly-two">✹</span>
+      </div>
+
+      <div class="hero-copy reveal">
+        <p class="eyebrow">CONESTOGA COLLEGE · GRADUATING STUDENT · 2026</p>
+        <h2>Welcome to the<br /><span>Portfolio DVD</span></h2>
+        <p class="hero-text">
+          A playful interactive portfolio built like a classic cartoon DVD menu: choose scenes, open project chapters, view bonus features, and explore the skills behind each academic build.
+        </p>
+        <div class="hero-actions" role="group" aria-label="Main DVD actions">
+          <a class="menu-button primary" href="#scene-selection"><span>▶</span> Scene Selection</a>
+          <a class="menu-button" href="#bonus-features"><span>★</span> Bonus Projects</a>
+          <a class="menu-button" href="#contact"><span>✉</span> Contact</a>
+        </div>
+      </div>
+
+      <aside class="dvd-remote reveal" aria-label="Interactive DVD remote">
+        <div class="remote-light">DVD</div>
+        <p>Remote Control</p>
+        <div class="remote-grid">
+          <button data-jump="#home">MENU</button>
+          <button data-jump="#scene-selection">SCENE</button>
+          <button data-jump="#skills">EXTRAS</button>
+          <button data-jump="#contact">CREDITS</button>
+        </div>
+        <div class="dpad" aria-label="Decorative remote control directional pad">
+          <span></span><span></span><span></span><strong>OK</strong><span></span><span></span><span></span>
+        </div>
+        <button class="random-scene" id="randomScene">Random Scene</button>
+      </aside>
+    </section>
+
+    <section class="marquee-strip" aria-label="Portfolio skills ticker">
+      <div class="marquee-track">
+        <span>UX DESIGN</span><span>MOBILE APPS</span><span>REST APIs</span><span>MYSQL</span><span>POWER BI</span><span>FIGMA</span><span>BLENDER</span><span>UNITY</span>
+        <span>UX DESIGN</span><span>MOBILE APPS</span><span>REST APIs</span><span>MYSQL</span><span>POWER BI</span><span>FIGMA</span><span>BLENDER</span><span>UNITY</span>
+      </div>
+    </section>
+
+    <section class="intro-panel section-wrap reveal">
+      <div>
+        <p class="eyebrow">MAIN FEATURE</p>
+        <h2>IT Innovation & Design graduate reel</h2>
+      </div>
+      <p>
+        I’m a graduating IT Innovation and Design student who builds across UX, mobile, web systems, backend APIs, databases, dashboards, and creative technology. This portfolio presents school projects as real product case studies for entry-level interviews.
+      </p>
+    </section>
+
+    <section id="scene-selection" class="section-wrap section-block">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SCENE SELECTION</p>
+        <h2>Pick a project chapter</h2>
+        <p>Each chapter opens like a DVD scene: overview, problem, role, tools, and what I learned.</p>
+      </div>
+
+      <div class="chapter-filters reveal" role="group" aria-label="Filter project scenes">
+        <button class="chapter-filter active" data-filter="all">All Scenes</button>
+        <button class="chapter-filter" data-filter="mobile">Mobile</button>
+        <button class="chapter-filter" data-filter="backend">Backend</button>
+        <button class="chapter-filter" data-filter="data">Data</button>
+        <button class="chapter-filter" data-filter="ux">UX</button>
+        <button class="chapter-filter" data-filter="creative">Creative</button>
+      </div>
+
+      <div class="scene-grid" id="sceneGrid">
+        <article class="scene-card reveal" data-category="mobile ux" data-project="memory" tabindex="0">
+          <div class="scene-screen memory"><span>01</span><i></i></div>
+          <div class="scene-copy">
+            <h3>Memory Log Mobile App</h3>
+            <p>Flutter app for saving memories with location support, offline storage, and simple mobile flows.</p>
+            <div class="badges"><span>Flutter</span><span>SQLite</span><span>Maps</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+
+        <article class="scene-card reveal" data-category="backend" data-project="marketplace" tabindex="0">
+          <div class="scene-screen marketplace"><span>02</span><i></i></div>
+          <div class="scene-copy">
+            <h3>Desired Marketplace API</h3>
+            <p>Backend API with REST routes, structured endpoints, auth concepts, and endpoint testing.</p>
+            <div class="badges"><span>Node.js</span><span>Express</span><span>REST</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+
+        <article class="scene-card reveal" data-category="backend" data-project="database" tabindex="0">
+          <div class="scene-screen database"><span>03</span><i></i></div>
+          <div class="scene-copy">
+            <h3>Member Database Web App</h3>
+            <p>Java/JSP/JDBC/MySQL CRUD app for storing, viewing, editing, and validating member data.</p>
+            <div class="badges"><span>Java</span><span>JSP</span><span>MySQL</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+
+        <article class="scene-card reveal" data-category="data" data-project="powerbi" tabindex="0">
+          <div class="scene-screen powerbi"><span>04</span><i></i></div>
+          <div class="scene-copy">
+            <h3>Power BI Real Estate Dashboard</h3>
+            <p>Dashboard for comparing housing choices by budget, zip/postal area, property type, and filters.</p>
+            <div class="badges"><span>Power BI</span><span>Slicers</span><span>Charts</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+
+        <article class="scene-card reveal" data-category="ux" data-project="weather" tabindex="0">
+          <div class="scene-screen weather"><span>05</span><i></i></div>
+          <div class="scene-copy">
+            <h3>Weather Dashboard UX Case Study</h3>
+            <p>UX project covering ideation, wireframes, prototype, usability testing, and final UI improvements.</p>
+            <div class="badges"><span>Figma</span><span>Research</span><span>Prototype</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+
+        <article class="scene-card reveal" data-category="mobile" data-project="workshop" tabindex="0">
+          <div class="scene-screen workshop"><span>06</span><i></i></div>
+          <div class="scene-copy">
+            <h3>Workshop Registration Android App</h3>
+            <p>Kotlin + Jetpack Compose app with validation, navigation, and reusable form components.</p>
+            <div class="badges"><span>Kotlin</span><span>Compose</span><span>Validation</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+
+        <article class="scene-card reveal" data-category="creative" data-project="creative" tabindex="0">
+          <div class="scene-screen creative"><span>07</span><i></i></div>
+          <div class="scene-copy">
+            <h3>3D Logo Animation + Unity Game</h3>
+            <p>Creative technology work using animation principles, interactive media, game menus, and motion.</p>
+            <div class="badges"><span>Blender</span><span>Unity</span><span>Motion</span></div>
+          </div>
+          <button>Open Chapter</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="bonus-features" class="section-wrap section-block bonus-zone">
+      <div class="section-heading reveal">
+        <p class="eyebrow">BONUS FEATURES</p>
+        <h2>Projects to build next for interviews</h2>
+        <p>These extra builds will make the portfolio feel less like school work and more like real product experience.</p>
+      </div>
+
+      <div class="bonus-grid">
+        <article class="bonus-card reveal">
+          <span class="bonus-icon">📅</span>
+          <h3>Small Business Booking System</h3>
+          <p>Booking form, admin dashboard, services, quote calculator, email confirmation, database, and live deployment.</p>
+          <strong>Best for:</strong> Full-stack, business analyst, product support, technical operations roles.
+        </article>
+        <article class="bonus-card reveal">
+          <span class="bonus-icon">🎧</span>
+          <h3>IT Help Desk Ticketing System</h3>
+          <p>Ticket creation, priority, status updates, categories, search, filtering, login, and dashboard metrics.</p>
+          <strong>Best for:</strong> IT support analyst, product support analyst, junior technical roles.</p>
+        </article>
+        <article class="bonus-card reveal">
+          <span class="bonus-icon">🎒</span>
+          <h3>Student Life Mobile App</h3>
+          <p>Class schedule, assignment tracker, reminders, campus resources, budget tracker, and dark/light mode.</p>
+          <strong>Best for:</strong> Mobile development, UX design, junior developer roles.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-wrap section-block skills-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SPECIAL FEATURES</p>
+        <h2>Skill map</h2>
+        <p>A quick view of the tools and areas represented across the portfolio.</p>
+      </div>
+
+      <div class="special-features reveal">
+        <div class="feature-disc" aria-hidden="true">
+          <span>DVD</span>
+        </div>
+        <div class="skill-cloud">
+          <span>UX Design</span>
+          <span>Figma</span>
+          <span>Kotlin</span>
+          <span>Jetpack Compose</span>
+          <span>Flutter</span>
+          <span>Java</span>
+          <span>JSP</span>
+          <span>JDBC</span>
+          <span>MySQL</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>REST APIs</span>
+          <span>Power BI</span>
+          <span>Blender</span>
+          <span>Unity</span>
+          <span>GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-wrap section-block credits-section">
+      <div class="credits-card reveal">
+        <p class="eyebrow">END CREDITS</p>
+        <h2>Available for entry-level technology roles</h2>
+        <p>
+          Looking for opportunities where I can combine user-centered design, technical problem-solving, and practical product thinking.
+        </p>
+        <div class="contact-buttons">
+          <a class="menu-button primary" href="mailto:your.email@example.com"><span>✉</span> Email Me</a>
+          <a class="menu-button" href="https://github.com/yourusername" target="_blank" rel="noreferrer"><span>⌘</span> GitHub</a>
+          <a class="menu-button" href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noreferrer"><span>in</span> LinkedIn</a>
+        </div>
+        <small>Replace the placeholder email, GitHub, LinkedIn, and resume links before publishing.</small>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="chapter-modal" id="chapterModal" aria-labelledby="modalTitle">
+    <div class="modal-shell">
+      <button class="modal-close" id="modalClose" aria-label="Close project chapter">×</button>
+      <div class="modal-poster" id="modalPoster" aria-hidden="true">
+        <span id="modalNumber">01</span>
+        <i></i>
+      </div>
+      <div class="modal-copy">
+        <p class="eyebrow" id="modalTag">SCENE 01</p>
+        <h2 id="modalTitle">Project Title</h2>
+        <p id="modalSummary">Project summary.</p>
+        <div class="modal-grid">
+          <article>
+            <h3>Problem</h3>
+            <p id="modalProblem"></p>
+          </article>
+          <article>
+            <h3>My Role</h3>
+            <p id="modalRole"></p>
+          </article>
+          <article>
+            <h3>Tools</h3>
+            <p id="modalTools"></p>
+          </article>
+          <article>
+            <h3>What I Learned</h3>
+            <p id="modalLearned"></p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <button class="accessibility-toggle" id="motionToggle" aria-pressed="false">Reduce Motion</button>
+  <script src="script.js"></script>
+</body>
+</html>
